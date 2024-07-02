@@ -9,12 +9,12 @@ router.get('/test', test)
 
 router.use('/auth', auth_router)
 
-
 const contro = (req, res) => {
     res.status(200).json({
         msg: 'Tu score es 1000'
     })
 }
+
 router.get('/score', valid_token, contro)
 
 export default router

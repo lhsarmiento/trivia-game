@@ -14,11 +14,11 @@ const register = async user_request => {
     if (is_nickname) return response(false, 'nickname already exist')
 
     const is_cel = await User.findOne({ cel: user_request.cel })
-    if (is_cel) return response(false, 'celular already exist')
+    if (is_cel) return response(false, 'cellphone already exist')
 
     delete user_request.confirm_password
 
-    const salt = await bcrypt.genSalt(5)
+    const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(user_request.password, salt)
 
     user_request = {

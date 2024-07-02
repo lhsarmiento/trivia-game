@@ -11,7 +11,7 @@
     "trivia",
     "game"
   ],
-  "author": "Juan Teheran",
+  "author": "Luis Sarmiento",
   "license": "MIT",
   "description": "Game of Trivia",
   "dependencies": {

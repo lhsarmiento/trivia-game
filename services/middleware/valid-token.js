@@ -4,7 +4,7 @@ import { response } from "../utils/response.js"
 
 export const valid_token = (req, res, next) => {
 
-    const { status, message } = constants.response //prueba
+    const { status, message } = constants.response
 
     const { authorization } = req.headers
     if (!authorization) return res.status(status.not_auth).json(response(false, message.not_auth))
